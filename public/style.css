@@ -446,6 +446,32 @@ video {
   display: none;
 }
 
+h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+a,
+    p,
+    input,
+    textarea,
+    select,
+    span,
+    div {
+  font-family: "Poppins", serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
