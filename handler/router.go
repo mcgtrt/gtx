@@ -19,6 +19,7 @@ func NewRouter(h *Handler) *mux.Router {
 
 func mountRoutes(r *mux.Router, h *Handler) {
 	r.HandleFunc("/", makeHandlerFunc(h.HandleHome)).Methods(http.MethodGet)
+	r.HandleFunc("/contact", makeHandlerFunc(h.HandleContact)).Methods(http.MethodGet)
 }
 
 // Middleware that takes care of extra "/" symbol at the end of URL path (if provided)

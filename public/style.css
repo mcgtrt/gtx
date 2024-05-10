@@ -558,17 +558,33 @@ video {
   display: flex;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .bg-inactive {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
-.bg-primary\/75 {
-  background-color: rgb(46 144 250 / 0.75);
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 144 250 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/public\/img\/sendiforce-auth-background-cold-outreach-automation\.jpg\'\)\] {
-  background-image: url('/public/img/sendiforce-auth-background-cold-outreach-automation.jpg');
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .antialiased {

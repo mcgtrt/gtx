@@ -16,6 +16,10 @@ func (h *Handler) HandleHome(c *Ctx) error {
 	return render(c, home.Home())
 }
 
+func (h *Handler) HandleContact(c *Ctx) error {
+	return render(c, home.Contact())
+}
+
 type Ctx struct {
 	Response http.ResponseWriter
 	Request  *http.Request
