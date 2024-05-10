@@ -6,6 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	_ "github.com/joho/godotenv/autoload"
+	"github.com/mcgtrt/gtx/handler"
 	"github.com/phuslu/log"
 )
 
@@ -37,5 +38,6 @@ func main() {
 }
 
 func init() {
+	r = handler.NewRouter(&handler.Handler{})
 	listenAddr = os.Getenv("HTTP_SERVER_PORT")
 }
