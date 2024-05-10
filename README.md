@@ -1,1 +1,1 @@
-# Web App Stack (Go, Templ, TailwindCSS, HTMX), all back-end generated. Powered by MongoDB and Docker.
+# Web App Stack (Go, Templ, TailwindCSS, HTMX), all back-end generated.
