@@ -1,3 +1,15 @@
+# Environmental Files
 .env
+.env*
+
+# Folders
 bin/
+tmp/
 node_modules/
+
+# MacOS
+.DS_Store
+
+# Debug
+*_templ.txt
+__debug*
