@@ -13,6 +13,7 @@ func NewRouter(h *Handler) *mux.Router {
 	r.Use(routingMiddleware)
 
 	mountRoutes(r, h)
+	mountPublic(r)
 
 	return r
 }
@@ -20,6 +21,11 @@ func NewRouter(h *Handler) *mux.Router {
 func mountRoutes(r *mux.Router, h *Handler) {
 	r.HandleFunc("/", makeHandlerFunc(h.HandleHome)).Methods(http.MethodGet)
 	r.HandleFunc("/contact", makeHandlerFunc(h.HandleContact)).Methods(http.MethodGet)
+}
+
+func mountPublic(r *mux.Router) {
+	fileServer := http.FileServer(http.Dir("./public"))
+	r.PathPrefix("/public/").Handler(http.StripPrefix("/public/", fileServer))
 }
 
 // Middleware that takes care of extra "/" symbol at the end of URL path (if provided)
